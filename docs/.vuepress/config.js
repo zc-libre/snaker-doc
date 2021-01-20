@@ -1,31 +1,29 @@
 module.exports = {
   base: "/snaker-docs/", //目录根地址，应与Github仓库名字相同
   title: "snaker-flow", // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
-  description: "创建 VuePress + GithubPages + TravisCI 在线文档", // meta 中的描述文字，用于SEO
+  description: "snakerflow", // meta 中的描述文字，用于SEO
   head: [
     [
       "link",
-      { rel: "icon", href: "/gamepad_game_128px.ico" }, //浏览器的标签栏的网页图标,基地址/docs/.vuepress/public
+      { rel: "icon", href: "/favicon.ico" }, //浏览器的标签栏的网页图标,基地址/docs/.vuepress/public
     ],
   ],
     markdown: {
     lineNumbers: true, //是否在每个代码块的左侧显示行号
   },
    themeConfig: {
-    nav: [
+   /* nav: [
       //链接页面链接的根地址为/docs
       { text: "思路", link: "/pages/flow.md" },
       { text: "创建Github仓库", link: "/pages/Github.md" },
       { text: "配置VuePress", link: "/pages/VuePress.md" },
       { text: "TravisCI生成和发布", link: "/pages/TravisCI.md" },
       { text: "博客", link: "https://tsanfer.xyz" },
-    ],
+    ],*/
+	
 	sidebarDepth: 2, //侧边栏深度
     sidebar: [
-      ["/pages/flow.md", "思路"],
-      ["/pages/Github.md", "创建Github仓库"],
-      ["/pages/VuePress.md", "配置VuePress"],
-      ["/pages/TravisCI.md", "TravisCI生成和发布"],
+      ["/pages/4.9 任务参与者.md", "4.9 任务参与者"]
     ],
 	 // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
     repo: "zc-libre/snaker-docs",
