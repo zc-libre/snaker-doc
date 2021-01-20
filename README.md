@@ -1,2 +1,1 @@
-# snaker-docs
-snaker-docs
+# Hello VuePress!
