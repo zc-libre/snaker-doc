@@ -1,4 +1,4 @@
-### 2.4 Nutz整合
+### Nutz整合
 
 - `增加maven依赖或jar`
 - `编写门面类SnakerFacets`
@@ -6,7 +6,7 @@
 - `配置Nutz的ioc`
 - `使用`
 
-#### 增加maven依赖或jar
+### 增加maven依赖或jar
 
 maven坐标如下：
 
@@ -20,7 +20,7 @@ maven坐标如下：
 
 如果非maven项目，需要到百度网盘下载jar包
 
-#### 编写门面类SnakerFacets
+### 编写门面类SnakerFacets
 
 ```java
 package test.nutz;
@@ -49,7 +49,7 @@ public class SnakerFacets {
 }
 ```
 
-#### 配置Nutz方式的DBAccess、事务拦截器
+### 配置Nutz方式的DBAccess、事务拦截器
 
 在snaker.xml中配置数据库访问类路径：
 
@@ -58,7 +58,7 @@ public class SnakerFacets {
 <bean class="org.snaker.nutz.access.NutzTransactionInterceptor"/>
 ```
 
-#### 配置Nutz的ioc
+### 配置Nutz的ioc
 
 ```java
 var ioc = {
@@ -90,7 +90,7 @@ var ioc = {
 }
 ```
 
-#### 使用
+### 使用
 
 ```java
 public class TestNutz {

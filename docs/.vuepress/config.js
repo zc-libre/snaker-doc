@@ -1,49 +1,46 @@
 module.exports = {
     // 插件
     plugins: {
-        '@vuepress/back-to-top': {}
+        "@vuepress/medium-zoom": true,
+        "@vuepress/nprogress": true, //网页加载进度条
+        "@vuepress/plugin-back-to-top": true, //返回页面顶部按钮
     },
     // 头部
     head: [
         ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
-        ['link', { rel: 'icon', href: '/logo/small.png' }]
+        ['link', { rel: 'icon', href: 'small.png' }]
     ],
     // 网站标题及描述
     theme: 'reco',
-    title: 'EL-ADMIN',
-    description: '一个简单且易上手的 Spring boot 后台管理框架',
+    title: 'snakerflow',
+    description: '简单、轻巧、灵活的工作流引擎',
+    base: '/snaker-doc/',
     // 主题配置
     themeConfig: {
         // 提取markdown中h2 和 h3 标题，显示在侧边栏上。
-        sidebarDepth: 2,
+        sidebarDepth: 3,
         // 文档更新时间
         lastUpdated: '更新时间',
         // logo
         subSidebar: 'auto',
-        logo: '/logo/small.png',
-        author: 'ZhengJie',
-        // 备案
-        record: '浙ICP备18005431号',
+        logo: 'snaker.png',
+        author: 'zhao.cheng',
         recordLink: 'https://beian.miit.gov.cn/#/Integrated/index',
         // 项目开始时间，只填写年份
-        startYear: '2018',
+        startYear: '2021',
         nav: [
             { text: '项目指南', link: '/guide/', icon: 'reco-document'},
-            { text: '常见问题', link: '/problem/', icon: 'reco-faq'},
-            { text: '更新日志', link: '/version/V2.6/', icon: 'reco-date'},
-            { text: '捐赠支持', link: '/donation/', icon: 'reco-account'},
-            { text: '体验地址', link: 'https://el-admin.xin', icon: 'reco-other'},
             // 下拉列表
             {
                 text: 'Github',
                 items: [
                     {
-                        text: '前端源码',
-                        link: 'https://github.com/elunez/eladmin-web'
+                        text: '原项目源码',
+                        link: 'https://github.com/snakerflow/snakerflow'
                     },
                     {
-                        text: '后端源码',
-                        link: 'https://github.com/elunez/eladmin'
+                        text: 'springboot源码',
+                        link: 'https://github.com/zc-libre/snakerflow-spring-boot-stater'
                     },
                 ],
                 icon: 'reco-github'
@@ -52,13 +49,13 @@ module.exports = {
                 text: 'Gitee',
                 items: [
                     {
-                        text: '前端源码',
-                        link: 'https://gitee.com/elunez/eladmin-web'
+                        text: '原项目源码',
+                        link: 'https://github.com/snakerflow/snakerflow'
                     },
                     {
-                        text: '后端源码',
-                        link: 'https://gitee.com/elunez/eladmin'
-                    }
+                        text: 'springboot源码',
+                        link: 'https://github.com/zc-libre/snakerflow-spring-boot-stater'
+                    },
                 ],
                 icon: 'reco-mayun'
             }
@@ -66,52 +63,60 @@ module.exports = {
         sidebar: {
             '/guide/': [
                 {
-                    title: '指南',
+                    title: '快速入门',
                     collapsable: false,
                     children: [
-                        '/guide/',
                         '/guide/quick-start',
-                        '/guide/4.9 任务参与者'
+                        '/guide/flow-design',
+                        '/guide/flow-deploy',
+                        '/guide/flow-start',
+                        '/guide/task-execute'
                     ]
                 },
                 {
-                    title: '其它',
+                    title: '应用整合',
                     collapsable: false,
                     children: [
-                        '/guide/gxdm',
-                        '/guide/bqsm'
+                        '/guide/app',
+                        '/guide/API',
+                        '/guide/Spring',
+                        '/guide/Jfinal',
+                        '/guide/Nutz'
                     ]
                 },
                 {
-                    title: '鸣谢',
+                    title: '详细说明',
                     collapsable: false,
                     children: [
-                        '/guide/mx'
+                        '/guide/table',
+                        '/guide/database',
+                        '/guide/snaker-engine',
+                        '/guide/process',
+                        '/guide/model',
+                        '/guide/instance',
+                        '/guide/active-task',
+                        '/guide/varible',
+                        '/guide/task-actor',
+                        '/guide/interceptor',
+                        '/guide/surrogate',
+                        '/guide/decision',
+                        '/guide/chirdren',
+                        '/guide/timer',
+                        '/guide/cc-order',
+                        '/guide/performType',
+                        '/guide/custom',
+                        '/guide/remove',
+                        '/guide/query'
                     ]
-                }
-            ],
-            '/donation/': [
-                '/donation/',
-            ],
-            '/problem/': [
-                '/problem/',
-            ],
-            '/version/': [
-                {
-                    title: '更新日志',
-                    collapsable: false,
-                    children: [
-                        'V2.6',
-                        'V2.5',
-                        'V2.4'
-                    ]
-                }
+                },
             ]
         },
         // 假如你的文档仓库和项目本身不在一个仓库：
-        docsRepo: 'elunez/eladmin-doc',
+        docsRepo: 'zc-libre/snaker-doc',
         // 假如文档不是放在仓库的根目录下：
         docsDir: 'docs',
+
+        docsBranch: "main",
         // 默认是 false, 设置为 true 来启用
         editLinks: true,
         // 默认为 "Edit this page"

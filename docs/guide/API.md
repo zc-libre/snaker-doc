@@ -1,4 +1,4 @@
-### 2.1 API整合
+### API整合
 
 如果使用api集成，需要在`snaker.xml`中配置`DBAccess`、`Transaction`、`Dialect`
 
