@@ -50,11 +50,11 @@ module.exports = {
                 items: [
                     {
                         text: '原项目源码',
-                        link: 'https://github.com/snakerflow/snakerflow'
+                        link: 'https://gitee.com/yuqs/snakerflow'
                     },
                     {
                         text: 'springboot源码',
-                        link: 'https://github.com/zc-libre/snakerflow-spring-boot-stater'
+                        link: 'https://gitee.com/zc-libre/snakerflow-spring-boot-stater'
                     },
                 ],
                 icon: 'reco-mayun'
@@ -81,7 +81,8 @@ module.exports = {
                         '/guide/API',
                         '/guide/Spring',
                         '/guide/Jfinal',
-                        '/guide/Nutz'
+                        '/guide/Nutz',
+						'/guide/springboot'
                     ]
                 },
                 {
