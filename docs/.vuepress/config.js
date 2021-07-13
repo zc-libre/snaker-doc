@@ -14,7 +14,7 @@ module.exports = {
     theme: 'reco',
     title: 'snakerflow',
     description: '简单、轻巧、灵活的工作流引擎',
-    base: '/snaker-doc/',
+    base: '/',
     // 主题配置
     themeConfig: {
         // 提取markdown中h2 和 h3 标题，显示在侧边栏上。
